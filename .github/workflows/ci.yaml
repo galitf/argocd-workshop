@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - master
-    # Not efficient to build both if one is changed however this will do for now
+    # Not efficient to build both if one is changed however this will do for now bb
     paths:
       - 'sources/fastapi-webapp/**'
       - 'sources/go-webapp/**'
