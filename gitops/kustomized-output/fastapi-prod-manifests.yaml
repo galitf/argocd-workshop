@@ -1,4 +1,4 @@
-# git commit: 77fd95b49ddf75c9b252fdd9eed2f4a0a90b1be4
+# git commit: 0df1deb867ca6599c012c1fb85bda946734ff90f
 apiVersion: v1
 kind: Namespace
 metadata:
@@ -8,11 +8,11 @@ apiVersion: v1
 data:
   CLUSTER: prod-cluster
   CLUSTER_IMAGE: prod
-  IMAGE: quay.io/grosenth/fastapi-argocd-workshop:prod-77fd95b49ddf75c9b252fdd9eed2f4a0a90b1be4
+  IMAGE: quay.io/grosenth/fastapi-argocd-workshop:prod-0df1deb867ca6599c012c1fb85bda946734ff90f
   PORT: "8080"
 kind: ConfigMap
 metadata:
-  name: app-envs-7t8mb5btb8
+  name: app-envs-fb92b8bbbm
   namespace: prod-fastapi
 ---
 apiVersion: v1
@@ -58,8 +58,8 @@ spec:
       containers:
       - envFrom:
         - configMapRef:
-            name: app-envs-7t8mb5btb8
-        image: quay.io/grosenth/fastapi-argocd-workshop:prod-77fd95b49ddf75c9b252fdd9eed2f4a0a90b1be4
+            name: app-envs-fb92b8bbbm
+        image: quay.io/grosenth/fastapi-argocd-workshop:prod-0df1deb867ca6599c012c1fb85bda946734ff90f
         livenessProbe:
           httpGet:
             path: /fastapi/health
